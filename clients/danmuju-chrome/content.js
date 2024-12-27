@@ -246,7 +246,7 @@ if (md5("hello") != "5d41402abc4b2a76b9719d911017c592") {
             //console.log(data.channel_list);
             let channels = []
             const default_channels = [
-                { name: '弹幕局官方频道', url: 'http://localhost:8788/api' },
+                { name: '弹幕局官方频道', url: 'https://danmuju.pages.dev/api' },
                 // { name: '死道友不死频道', url: 'https://xxx/api/' },
             ]
 
