@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "弹幕局",
+    "version": "1.0",
+    "description": "一个全网跨域弹幕的插件。",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "http://*/",
+      "https://*/"
+    ],
+    "host_permissions": [
+      "http://*/",
+      "https://*/"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "action": {
+      "default_popup": "settings.html",  // 设置插件的弹出页面
+      "default_icon": {
+        "16": "icons/logo.png",
+        "48": "icons/logo.png",
+        "128": "icons/logo.png"
+      }
+    },
+    "options_page": "settings.html",  // 设置页面
+    "icons": {
+      "16": "icons/logo.png",
+      "48": "icons/logo.png",
+      "128": "icons/logo.png"
+    }
+  }
+  

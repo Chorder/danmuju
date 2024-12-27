@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>插件设置</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 5px;
+      width: 300px;
+    }
+    input[type="text"], input[type="number"], input[type="range"] {
+      width: 100%;
+      margin: 10px 0;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    /* label {
+      font-size: 18px;
+    } */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 20px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #4CAF50;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
+    .color-input-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .color-box {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+    }
+
+    #notice{
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+  <p>全局弹幕设置 &nbsp;<span id="notice"></span></p>
+  
+  <form id="settings-form">
+    <label>启用弹幕:</label>
+    <label class="switch">
+      <input type="checkbox" id="enable_danmu">
+      <span class="slider"></span>
+    </label>
+    <br/>
+    <label for="color">弹幕颜色:</label>
+    <div class="color-input-wrapper">
+      <div id="color-box" class="color-box" style="background-color: #00FF00;"></div>
+      <input type="text" id="color-input" placeholder="输入颜色代码，如: #EFEFEF" value="#00FF00">
+    </div>
+
+    <label for="font_size">弹幕字号: <span id="font_size_value">18</span>px</label>
+    <input type="range" id="font_size" min="10" max="100" value="18">
+
+    <label for="speed">弹幕速度: <span id="speed_value">5</span> </label>
+    <input type="range" id="speed" min="1" max="10" value="5">
+
+    <!-- <label for="css_style">弹幕 CSS 样式:</label>
+    <input type="text" id="css_style" placeholder="输入CSS样式，如: font-style: italic;">
+     -->
+
+    <label for="uuid">用户 (UUID):</label>
+    <input type="text" id="uuid" placeholder="填入你的UUID，可在弹幕局官网注册">
+
+     
+    <label for="channel_list">频道列表（JSON列表）:</label><br/>
+    <textarea rows="3" style="width:293px;margin-bottom: 10px;" id="channel_list"></textarea>
+
+    <button type="submit">保存设置</button>
+  </form>
+
+  <script src="settings.js"></script>
+</body>
+</html>
