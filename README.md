@@ -5,16 +5,16 @@
 ## 插件截图
 
 在某度首页弹幕：
-![](screenshots/1.png)
+![](./screenshots/1.png)
 
 发送弹幕的面板：
-![](screenshots/2.png)
+![](./screenshots/2.png)
 
 弹幕设置界面：
-![](screenshots/3.png)
+![](./screenshots/3.png)
 
 内网弹幕：
-![](screenshots/4.png)
+![](./screenshots/4.png)
 
 
 ## 安装插件客户端
@@ -27,10 +27,10 @@ Firefox:https://github.com/Chorder/danmuju/tree/master/clients/danmuju-firefox
 根据你需要的版本，将上面的插件源代码下载到本地后，
 
 火狐，在拓展管理中，点击“临时加载附加组件”->选择文件夹中的manifest.json，即可载入。
-![](screenshots/firefox.png)
+![](./screenshots/firefox.png)
 
 Edge和Chrome，在拓展管理中，点击“加载解压缩的拓展”，即可载入。
-![](screenshots/edge.png)
+![](./screenshots/edge.png)
 
 ## 自定义插件设置
 
