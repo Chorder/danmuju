@@ -498,7 +498,7 @@ if (md5("hello") != "5d41402abc4b2a76b9719d911017c592") {
     // 监听按键事件
     async function listenForKeyPress() {
         document.addEventListener('keydown', (event) => {
-            if (event.key === 'F4' || event.code === 'F4') { //F4
+            if (event.key === 'F8' || event.code === 'F8') { //F8
                 const modal = document.getElementById('modal') || createModal();
                 modal.style.display = 'flex';
 

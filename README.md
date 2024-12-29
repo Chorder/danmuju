@@ -21,28 +21,37 @@
 ![](./screenshots/4.png)
 
 
+## 如何使用
+
+在安装好插件客户端之后，默认弹幕是**关闭**的，需要点开插件的设置界面，开启弹幕才能加载弹幕。
+
+在要弹幕的网页上按下快捷键`F8`（快捷键可以在插件源码content.js的第501行，修改成你想要的快捷键），弹出弹幕发送框，输入弹幕即可发送。
+
+
 ## 安装插件客户端
 
 首先下载插件源码，地址：
+
+可以把整个项目下载下来，然后把项目根目录下的`clients/danmuju-chrome`文件夹拷贝到你希望的位置。
 
 Chrome:https://github.com/Chorder/danmuju/tree/master/clients/danmuju-chrome
 Firefox:https://github.com/Chorder/danmuju/tree/master/clients/danmuju-firefox
 
 根据你需要的版本，将上面的插件源代码下载到本地后，
 
+Edge和Chrome，在拓展管理中，点击“加载解压缩的拓展”->选择文件夹中的manifest.json，即可载入。
+![](./screenshots/edge.png)
+
+
 火狐，在拓展管理中，点击“临时加载附加组件”->选择文件夹中的manifest.json，即可载入。
 ![](./screenshots/firefox.png)
 
-Edge和Chrome，在拓展管理中，点击“加载解压缩的拓展”，即可载入。
-![](./screenshots/edge.png)
 
-## 自定义插件设置
-
-如果你对插件的使用手感不满意，尤其是对于快捷键F4不是很满意，可以在插件源码content.js的第501行，修改成你想要的快捷键即可。
 
 ## 部署私有频道
 
 1. 克隆仓库、安装wrangler
+
 首先克隆该仓库
 
 `git clone https://github.com/Chorder/danmuju`
@@ -59,7 +68,7 @@ Edge和Chrome，在拓展管理中，点击“加载解压缩的拓展”，即�
 
 `wrangler login`
 
-根据提示会打开一个浏览器页面，选择同意，即可。
+如果是在含有桌面环境的命令行运行，程序会自动打开一个浏览器页面，选择同意，即可。
 
 2. 创建CloudFlare D1数据库
 
